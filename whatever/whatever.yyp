@@ -127,11 +127,27 @@
             }
         },
         {
+            "Key": "76c444e5-6c58-4aec-8397-2c9726077239",
+            "Value": {
+                "id": "fd9ce896-bab4-4910-84e5-b3f3f1612eac",
+                "resourcePath": "rooms\\room0\\room0.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "8ea1a392-3def-4ac6-aa2c-68c707b583bd",
             "Value": {
                 "id": "7d94089e-43aa-4b90-9fbc-9e7a89ab8107",
                 "resourcePath": "views\\8ea1a392-3def-4ac6-aa2c-68c707b583bd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c02af3ee-7dde-40ac-9b48-92efb9be2d80",
+            "Value": {
+                "id": "da80eaa6-5b07-415f-a88e-a529fdf48921",
+                "resourcePath": "sprites\\spr_background\\spr_background.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -180,6 +196,14 @@
                 "id": "e060a365-8c7d-4f15-bf8a-3d6affb645ed",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e914d432-e68e-4bc7-9bc6-9ddb3c8d4e29",
+            "Value": {
+                "id": "c64c32ba-5dc7-45af-934f-296ecca61039",
+                "resourcePath": "tilesets\\ts_retro\\ts_retro.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
