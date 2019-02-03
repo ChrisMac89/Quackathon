@@ -2,8 +2,10 @@
 //Movement
 globalvar playerSpeed;
 globalvar isMoving;
-globalvar playerHealth;
-playerHealth = 100;
+var deathZoneDamage = 20;
+
+
+
 
 playerSpeed = 7;
 
@@ -28,16 +30,26 @@ if(keyboard_check(vk_down) or keyboard_check(ord("S")))
 if((!keyboard_check(vk_down)) and (!keyboard_check(vk_up)) and (!keyboard_check(vk_left)) and (!keyboard_check(vk_right)) and !(keyboard_check(ord("D")))  and !(keyboard_check(ord("A"))) and !(keyboard_check(ord("S"))) and !(keyboard_check(ord("W"))))
 {
 	isMoving = "false";
-	playerHealth -= 1;
+	//hp -= 1;
 }
 else
 	isMoving = "true";
 
 
 //Shooting 
+if(weapon)
+{
 if(mouse_check_button(mb_left))
 {
 	instance_create_layer(x, y, layer, obj_bullet);
+	audio_play_sound(snd_shoot, 10, false);
+}
+}
+
+if(mouse_check_button(mb_right))
+{
+	instance_create_layer(x, y, layer, obj_grenade);
+	audio_play_sound(snd_shoot, 10, false);
 }
 
 
@@ -122,6 +134,76 @@ if(jump_is_inside_buffer)
     jump_buffer_timer--;
 }
 
+if(touchingGreen and (object19.visible == true))
+{
+	vsp = -jumpspeed * 1.5;
+	
+	
+	touchingGreen = false;
+	hp -= deathZoneDamage;
+}
+
+if(touchingBlue and (object22.visible == true))
+{
+	vsp = -jumpspeed * 1.5;
+	
+	
+	touchingBlue = false;
+	hp -= deathZoneDamage;
+}
+
+if(touching23 and (object23.visible == true))
+{
+	vsp = -jumpspeed * 1.5;
+	
+	
+	touching23 = false;
+	hp -= deathZoneDamage;
+}
+
+if(touching24 and (object24.visible == true))
+{
+	hsp = jumpspeed * 2;
+	
+	
+	touching24 = false;
+	
+	hp -= deathZoneDamage;
+}
+
+if(touching25 and (object25.visible == true))
+{
+	vsp = jumpspeed * 1.5;
+	
+	
+	touching25 = false;
+	
+	hp -= deathZoneDamage;
+}
+
+if(touching26 and (object26.visible == true))
+{
+	vsp = jumpspeed * 1.5;
+	
+	
+	touching26 = false;
+	
+	hp -= deathZoneDamage;
+}
+
+if(touching27 and (object27.visible == true))
+{
+	vsp = jumpspeed * 1.5;
+	
+	
+	touching27 = false;
+	
+	hp -= deathZoneDamage;
+}
+
+
+
+
 //for variable jumping
 //if(vsp <0 && !key_jump_held) vsp = max(vsp,0)
 
@@ -159,3 +241,5 @@ image_alpha = hp/100;
 
 if hp<= 0 
 game_end();
+
+

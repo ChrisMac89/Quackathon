@@ -3,8 +3,31 @@
 //Test comment
 globalvar playerHealth;
 playerHealth = 10000;
+globalvar touchingGreen;
+touchingGreen = false;
 
+globalvar touchingBlue;
+touchingBlue = false;
 
+globalvar touching23;
+touching23 = false;
+
+globalvar touching24;
+touching24 = false;
+
+globalvar touching25;
+touching25 = false;
+
+globalvar touching26;
+touching26 = false;
+
+globalvar touching27;
+touching27 = false;
+
+globalvar weapon;
+weapon = false;
+
+audio_play_sound(snd_off_limits, 10, true);
 
 grav = 0.2;
 hsp = 0; //horizontal speed
@@ -20,5 +43,5 @@ jump_buffer_timer = jump_buffer;
 
 
 
-hp= 100;
+hp= 1000;
 
