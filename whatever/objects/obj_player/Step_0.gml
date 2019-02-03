@@ -238,8 +238,20 @@ y += vsp;
 
 // player death
 image_alpha = hp/100;
+ 
+if (hp <0)
+{
+	restart = true;
+	if(keyboard_check_pressed(vk_space))
+	{
+		room_restart();
+	}
+}
 
-if hp<= 0 
-game_end();
+if keyboard_check_pressed(vk_escape) 
+{
+room_goto(menu);	
+}
+//room_goto(menu);
 
 
