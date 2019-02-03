@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Test comment
+restart = false;
 globalvar playerHealth;
 playerHealth = 10000;
 globalvar touchingGreen;
