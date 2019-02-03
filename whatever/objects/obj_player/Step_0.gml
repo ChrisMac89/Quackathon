@@ -1,7 +1,5 @@
-//Movement
 
 //Movement
-
 globalvar playerSpeed;
 globalvar isMoving;
 globalvar playerHealth;
@@ -154,3 +152,10 @@ y += vsp;
 
 /* */
 /*  */
+
+
+// player death
+image_alpha = hp/100;
+
+if hp<= 0 
+game_end();

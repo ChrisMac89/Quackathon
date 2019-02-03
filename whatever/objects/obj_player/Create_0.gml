@@ -17,3 +17,8 @@ grace_timer = grace_jump_time;
 //for input buffering
 jump_buffer = 0; //number of grace period frames between player pressing jump and hitting the ground when they will still jump
 jump_buffer_timer = jump_buffer;
+
+
+
+hp= 100;
+
